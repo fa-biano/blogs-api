@@ -45,15 +45,21 @@ Clone o repositório: `git clone git@github.com:fa-biano/blogs-api.git`.
   > :information_source: Após seguir os passos de como rodar o projeto citados acima
 
   Renomeie o arquivo `.env.example` para `.env`.
+  
+  Instale as dependências `npm install`
 
-  Crie o banco de dados e suas tabelas:
-  - `npm run prestart`
+  Suba os containers do docker compose `docker compose up -d --build`
 
-  Insera os dados iniciais nas tabelas:
-  - `npm run seed`
+  Acesse o container `node` que está rodando em segundo plano `docker exec -it blogs_api bash`
 
-  Inicie o servidor:
-  - `npm start`
+  Dentro do container: 
+  - Instale as dependências `npm install`
+
+  - Crie o banco de dados e suas tabelas: `npm run prestart`
+
+  - Insira os dados iniciais nas tabelas: `npm run seed`
+
+  - Inicie o servidor: `npm start`
 
 ## Rotas:
 
