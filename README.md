@@ -1,8 +1,9 @@
 # 📑 Projeto Blogs Api!
 
-Nesse projeto foi desenvolvida uma API REST e um banco de dados para produção de conteúdo para um blog. </br>
+Nesse projeto foi desenvolvida uma API REST e um banco de dados para produção de conteúdo para um blog.
+
 Foram implementados endpoints que realizam um CRUD de postagens no blog. </br>
-No entando, somente usuários logados e autenticados podem realizar alterações. Para isso existem os endpoints para criação e realização de login.
+No entando, somente usuários logados e autenticados podem realizar alterações. Para isso, existem os endpoints para criação e realização de login.
 
 Toda a estrutura do projeto foi criada e organizada seguindo a Arquitetura em Camadas MSC (Model, Service e Controller).
 
@@ -62,12 +63,15 @@ O projeto está rodando na porta `3000`. Seguem as rotas que podem ser acessadas
     - POST: cria novo usuário; </br>
     - GET: lista os usuários cadastrados; </br>
     - GET: `/user/:id` traz as informações do usuário conforme id; </br>
-    - DELETE: `/user/me` exclui o cadastro do usuário logado; </br>
+    - DELETE: `/user/me` exclui o cadastro do usuário logado;
+
   `/login`: </br>
-    - POST: realiza login para usuário existente; </br>
+    - POST: realiza login para usuário existente;
+
   `/categories`: </br>
     - GET: lista as categorias de post disponíveis; </br>
-    - POST: cria nova categoria para os posts; </br>
+    - POST: cria nova categoria para os posts;
+    
   `/post`: </br>
     - POST: cria novo post para o blog; </br>
     - GET: lista todos os posts; </br>
