@@ -1,10 +1,16 @@
 # 📑 Projeto Blogs Api!
 
-Explicar o projeto...
+Nesse projeto foi desenvolvida uma API REST e um banco de dados para produção de conteúdo para um blog.
+Foram implementados endpoints que realizam um CRUD de postagens no blog. 
+No entando, somente usuários logados e autenticados podem realizar alterações. Para isso existem os endpoints para criação e realização de login.
+
+Toda a estrutura do projeto foi criada e organizada seguindo a Arquitetura em Camadas MSC (Model, Service e Controller).
+
+O desenvolvimento desse projeto foi realizado durante o curso de Desenvolvimento Web na [Trybe](https://www.betrybe.com/)!
 
 ## Como utilizar:
 
-Clone o repositório: `git clone ...`.
+Clone o repositório: `git clone git@github.com:fa-biano/blogs-api.git`.
 
 <details>
   <summary><strong>Rodando com Docker :whale: ou Localmente</strong></summary>
@@ -34,14 +40,46 @@ Clone o repositório: `git clone ...`.
   <br>  
 </details>
 
+## Inicializando:
+  > :information_source: Após seguir os passos de como rodar o projeto citados acima
+
+  Renomeie o arquivo `.env.example` para `.env`.
+
+  Criar o banco de dados e suas tabelas:
+  - `npm run prestart`
+
+  Inserir dados iniciais nas tabelas:
+  - `npm run seed`
+
+  Iniciar o servidor:
+  - `npm start`
+
 ## Rotas:
 
 O projeto está rodando na porta `3000`. Seguem as rotas que podem ser acessadas:
 
- - listar rotas
+  `/user`:
+    - POST: cria novo usuário;
+    - GET: lista os usuários cadastrados;
+    - GET: `/user/:id` traz as informações do usuário conforme id;
+    - DELETE: `/user/me` exclui o cadastro do usuário logado;
+  `/login`:
+    - POST: realiza login para usuário existente;
+  `/categories`:
+    - GET: lista as categorias de post disponíveis;
+    - POST: cria nova categoria para os posts;
+  `/post`
+    - POST: cria novo post para o blog;
+    - GET: lista todos os posts;
+    - GET: `/post/:id` traz as informações do post conforme id;
+    - GET: `/post/search` lista todos os posts que contenha a palavra pesquisada (request query);
+    - PUT: `/post/:id` atualiza as informações do post conforme id;
+    - DELETE: `/post/:id` deleta as informações do post conforme id;
+
+Utilize o seu client preferido para testar as rotas acima.
 
 ## Tecnologias utilizadas:
 
-  - listar tecnologias
-
-
+  **Back-end:** Node.js, Express, Sequelize (ORM) e JWT (jsonwebtoken) para Autenticação
+  **Banco de Dados:** SQL MySQL
+  **Arquitetura:** MSC (Model, Service, Controller)
