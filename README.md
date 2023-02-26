@@ -61,7 +61,7 @@ Clone o repositório: `git clone git@github.com:fa-biano/blogs-api.git`.
 
   - Inicie o servidor: `npm start`
 
-## Rotas:
+## :mailbox_with_no_mail: Rotas:
 
 O projeto está rodando na porta `3000`. Seguem as rotas que podem ser acessadas:
 
@@ -88,7 +88,7 @@ O projeto está rodando na porta `3000`. Seguem as rotas que podem ser acessadas
 
 Utilize o seu client preferido para testar as rotas acima.
 
-## Tecnologias utilizadas:
+## :fire: Tecnologias utilizadas:
 
   **Back-end:** Node.js, Express, Sequelize (ORM) e JWT (jsonwebtoken) para Autenticação </br>
   **Banco de Dados:** SQL MySQL </br>
